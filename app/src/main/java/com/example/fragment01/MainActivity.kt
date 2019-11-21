@@ -55,5 +55,19 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        btnReplacexA.setOnClickListener {
+            val fragmet = BlankFragment()
+            val transaction = manager.beginTransaction()
+            transaction.replace(R.id.container, fragmet, "BlankFragment")
+            transaction.commit()
+        }
+
+        btnReplacexB.setOnClickListener {
+            val fragmet = SecondFragment()
+            val transaction = manager.beginTransaction()
+            transaction.replace(R.id.container, fragmet, "SecondFragment")
+            transaction.commit()
+        }
+
     }
 }
