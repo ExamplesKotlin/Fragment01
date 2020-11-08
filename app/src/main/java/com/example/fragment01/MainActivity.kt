@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.FragmentManager
+import com.example.fragment01.fragment.BlankFragment
+import com.example.fragment01.fragment.SecondFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -32,7 +34,8 @@ class MainActivity : AppCompatActivity() {
                 transaction.remove(fragment)
                 transaction.commit()
             } else {
-                Toast.makeText(this, "Fragment BlankFragment Not Found", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this, "Fragment BlankFragment Not Found", Toast.LENGTH_SHORT).show()
+                showMessage("Fragment BlankFragment (A) Not Found")
             }
         }
 
@@ -51,7 +54,8 @@ class MainActivity : AppCompatActivity() {
                 transaction.remove(fragment)
                 transaction.commit()
             } else {
-                Toast.makeText(this, "Fragment SecondFragment Not Found", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this, "Fragment SecondFragment Not Found", Toast.LENGTH_SHORT).show()
+                showMessage("Fragment SecondFragment (B) Not Found")
             }
         }
 
